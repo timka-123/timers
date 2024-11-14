@@ -1,0 +1,154 @@
+html {
+    background-color: #003f32;
+    background-repeat: no-repeat;
+    color: #fcfcfc;
+    height: calc(100% - 4rem);
+    width: calc(100% - 4rem);
+    margin: 2rem;
+  }
+  
+  body {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    /*flex-grow: 1;*/
+    /*flex-basis: 100%;*/
+  }
+  
+  
+  a {
+    color: #0082ff;
+    text-decoration: none;
+  }
+  
+  .hidden {
+      display: none !important;
+  }
+  
+  .wrapper {
+    /*max-width: 90em;*/
+    /*padding: 1rem !important;*/
+    /*margin-right: auto;*/
+    /*margin-left: auto;*/
+    width: 100%;
+    height: 100%;
+    /*box-sizing: border-box;*/
+    /*margin: 100px;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+  }
+  
+  main {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    /*margin: 1rem;*/
+    /*margin-top: 3rem;*/
+  }
+  
+  .title {
+    text-align: center;
+    font-family: "Helvetica Bold", sans-serif;
+    font-size: 3rem;
+    /*letter-spacing: 1px;*/
+    display: flex;
+    margin-top: 2.5rem;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .title-text {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  
+  .icon-left, .icon-right {
+    color: #0081fd;
+  }
+  
+  .icon-left-svg {
+    transform: rotate(180deg);
+  }
+  
+  .image {
+    position: relative;
+  }
+  
+  #timer {
+    position: absolute;
+  
+    font-family: clock, monospace;
+    text-align: center;
+    vertical-align: middle;
+  
+    line-height: 420px;
+    width: 831px;
+  
+    font-size: 3rem;
+    padding-top: 2px;
+  }
+  
+  .divider {
+    font-weight: bold;
+  }
+  
+  .colon {
+    margin-right: -20px;
+    margin-left: -20px;
+    letter-spacing: -2px;
+  }
+  
+  .orange {
+    color: orange;
+  }
+  
+  .red {
+    color: #ff4c5b !important;
+  }
+  
+  #footer {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .bomb {
+      display: none !important;
+    }
+  
+    .title {
+      font-size: 6vw;
+    }
+  
+    #timer {
+      line-height: 50px;
+      width: 100%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 10vw;
+    }
+  
+    .colon {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  
+    .image {
+      margin-bottom: 10vh;
+    }
+  
+    #footer {
+      flex-direction: column;
+      gap: 2vh;
+      text-align: center;
+    }
+  }
+  
