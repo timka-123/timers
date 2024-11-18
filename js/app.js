@@ -1,11 +1,13 @@
 let finalDates = {
-    "six_release": new Date("2024/11/18 23:59:59 GMT+03:00"),
+    // "six_release": new Date("2024/11/18 23:59:59 GMT+03:00"),
+"new_year": new Date("2025/01/01 00:00:00 GMT+03:00"),
 };
 
 let finalDatesKeys = Object.keys(finalDates);
 
 let finalDatesDescriptions = {
     "six_release": "Релиз шестого выпуска 🤯",
+"new_year": "До нового года осталось"
 }
 
 let currentKey = window.location.search.replace("?", "");
