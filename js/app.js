@@ -1,13 +1,13 @@
 let finalDates = {
     "seven_release": new Date("2024/12/31 19:00:00 GMT+03:00"),
-"new_year": new Date("2025/01/01 00:00:00 GMT+03:00"),
+    "new_year": new Date("2025/01/01 00:00:00 GMT+03:00"),
 };
 
 let finalDatesKeys = Object.keys(finalDates);
 
 let finalDatesDescriptions = {
     "six_release": "Релиз шестого выпуска 🤯",
-"new_year": "До нового года осталось",
+    "new_year": "До нового года осталось",
     "seven_release": "Релиз седьмого выпуска"
 }
 
@@ -31,10 +31,6 @@ let rightLink = document.getElementById("rightLink");
 if (prevKey !== undefined) {
     leftLink.href = "?" + prevKey;
     leftLink.classList.remove("hidden");
-}
-if (nextKey !== undefined) {
-    rightLink.href = "?" + nextKey;
-    rightLink.classList.remove("hidden");
 }
 
 function paintWithColor(frame, color) {
