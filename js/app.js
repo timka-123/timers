@@ -1,6 +1,5 @@
 let finalDates = {
-    "seven_release": new Date("2024/12/31 19:00:00 GMT+03:00"),
-    "new_year": new Date("2025/01/01 00:00:00 GMT+03:00"),
+    "seven_release": new Date("2025/1/1 23:59:59 GMT+03:00"),
 };
 
 let finalDatesKeys = Object.keys(finalDates);
