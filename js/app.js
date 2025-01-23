@@ -5,9 +5,7 @@ let finalDates = {
 let finalDatesKeys = Object.keys(finalDates);
 
 let finalDatesDescriptions = {
-    "six_release": "Релиз шестого выпуска 🤯",
-    "new_year": "До нового года осталось",
-    "seven_release": "Релиз седьмого выпуска"
+    "seven_release": "Релиз седьмого выпуска :)"
 }
 
 let currentKey = window.location.search.replace("?", "");
