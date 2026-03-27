@@ -1,5 +1,5 @@
 let finalDates = {
-    "vsos_rezi": new Date("2026/28/03 11:00:00 GMT+03:00"),
+    "vsos_rezi": new Date("March 29 2026 11:00:00 GMT+0300"),
 };
 
 let finalDatesKeys = Object.keys(finalDates);
