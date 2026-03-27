@@ -1,95 +1,99 @@
 let finalDates = {
-    "vsos_rezi": new Date("March 29 2026 11:00:00 GMT+0300"),
+  vsos_rezi: new Date("March 28 2026 11:00:00 GMT+0300"),
 };
 
 let finalDatesKeys = Object.keys(finalDates);
 
 let finalDatesDescriptions = {
-    "seven_release": "Релиз седьмого выпуска :)",
-    "vsos_rezi": "Награждение ВСОШ"
-}
+  seven_release: "Релиз седьмого выпуска :)",
+  vsos_rezi: "Награждение ВСОШ",
+};
 
 let currentKey = window.location.search.replace("?", "");
 if (finalDates[currentKey] === undefined) {
-    let currentKeyIndex = 0;
-    while (finalDates[finalDatesKeys[currentKeyIndex]] < (new Date() - 1800 * 1000)) {
-        currentKeyIndex++;
-        if (currentKeyIndex === finalDatesKeys.length - 1) {
-            break;
-        }
+  let currentKeyIndex = 0;
+  while (
+    finalDates[finalDatesKeys[currentKeyIndex]] <
+    new Date() - 1800 * 1000
+  ) {
+    currentKeyIndex++;
+    if (currentKeyIndex === finalDatesKeys.length - 1) {
+      break;
     }
-    currentKey = finalDatesKeys[currentKeyIndex];
+  }
+  currentKey = finalDatesKeys[currentKeyIndex];
 }
 let nextKey = finalDatesKeys[finalDatesKeys.indexOf(currentKey) + 1];
 let prevKey = finalDatesKeys[finalDatesKeys.indexOf(currentKey) - 1];
 
-document.getElementById("dateDescription").innerText = finalDatesDescriptions[currentKey];
+document.getElementById("dateDescription").innerText =
+  finalDatesDescriptions[currentKey];
 let leftLink = document.getElementById("leftLink");
 let rightLink = document.getElementById("rightLink");
 if (prevKey !== undefined) {
-    leftLink.href = "?" + prevKey;
-    leftLink.classList.remove("hidden");
+  leftLink.href = "?" + prevKey;
+  leftLink.classList.remove("hidden");
 }
 
 function paintWithColor(frame, color) {
-    document.getElementById(frame).classList.add(color);
-    if (frame !== "seconds") {
-        document.getElementById( frame + "Divider").classList.add(color);
-    }
+  document.getElementById(frame).classList.add(color);
+  if (frame !== "seconds") {
+    document.getElementById(frame + "Divider").classList.add(color);
+  }
 }
 
 function updateColors(delta) {
-    if (delta < 86400) {
-        paintWithColor("days", "red");
-    } else if (delta < 86400 * 2) {
-        paintWithColor("days", "orange");
-    }
+  if (delta < 86400) {
+    paintWithColor("days", "red");
+  } else if (delta < 86400 * 2) {
+    paintWithColor("days", "orange");
+  }
 
-    if (delta < 3600) {
-        paintWithColor("hours", "red");
-        paintWithColor("minutes", "orange");
-    } else if (delta < 86400) {
-        paintWithColor("hours", "orange");
-    }
+  if (delta < 3600) {
+    paintWithColor("hours", "red");
+    paintWithColor("minutes", "orange");
+  } else if (delta < 86400) {
+    paintWithColor("hours", "orange");
+  }
 
-    if (delta < 60) {
-        paintWithColor("minutes", "red");
-    }
-    if (delta <= 0) {
-        paintWithColor("seconds", "red");
-    }
+  if (delta < 60) {
+    paintWithColor("minutes", "red");
+  }
+  if (delta <= 0) {
+    paintWithColor("seconds", "red");
+  }
 }
 
 function updateCountdown(force) {
-    let now = new Date();
-    let delta = Math.floor((finalDates[currentKey] - now) / 1000);
+  let now = new Date();
+  let delta = Math.floor((finalDates[currentKey] - now) / 1000);
 
-    let elements = [
-        document.getElementById("days"),
-        document.getElementById("hours"),
-        document.getElementById("minutes"),
-        document.getElementById("seconds"),
-    ]
-    let values = ["00", "00", "00", "00"];
+  let elements = [
+    document.getElementById("days"),
+    document.getElementById("hours"),
+    document.getElementById("minutes"),
+    document.getElementById("seconds"),
+  ];
+  let values = ["00", "00", "00", "00"];
 
-    if (delta > 0) {
-        values[0] = Math.floor(delta / 86400);
-        values[1] = Math.floor(delta % 86400 / 3600);
-        values[2] = Math.floor(delta % 3600 / 60);
-        values[3] = delta % 60;
-
-        for (let i = 0; i < 4; i++) {
-            values[i] = (values[i] < 10 ? "0" : "") + values[i];
-        }
-    }
+  if (delta > 0) {
+    values[0] = Math.floor(delta / 86400);
+    values[1] = Math.floor((delta % 86400) / 3600);
+    values[2] = Math.floor((delta % 3600) / 60);
+    values[3] = delta % 60;
 
     for (let i = 0; i < 4; i++) {
-        elements[i].innerText = values[i];
+      values[i] = (values[i] < 10 ? "0" : "") + values[i];
     }
+  }
 
-    if (delta % 60 === 59 || delta < 0 || force) {
-        updateColors(delta);
-    }
+  for (let i = 0; i < 4; i++) {
+    elements[i].innerText = values[i];
+  }
+
+  if (delta % 60 === 59 || delta < 0 || force) {
+    updateColors(delta);
+  }
 }
 
 updateCountdown(true);
