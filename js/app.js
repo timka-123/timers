@@ -1,11 +1,12 @@
 let finalDates = {
-    "seven_release": new Date("2025/1/10 23:59:59 GMT+03:00"),
+    "seven_release": new Date("2026/27/03 11:00:00 GMT+03:00"),
 };
 
 let finalDatesKeys = Object.keys(finalDates);
 
 let finalDatesDescriptions = {
-    "seven_release": "Релиз седьмого выпуска :)"
+    "seven_release": "Релиз седьмого выпуска :)",
+    "vsos_rezi": "Награждение ВСОШ"
 }
 
 let currentKey = window.location.search.replace("?", "");
