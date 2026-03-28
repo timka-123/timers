@@ -1,5 +1,6 @@
 let finalDates = {
   vsos_rezi: new Date("March 28 2026 11:00:00 GMT+0300"),
+  first_edu_day: new Date("April 2 2026 08:00:00 GMT+0300"),
 };
 
 let finalDatesKeys = Object.keys(finalDates);
@@ -7,6 +8,7 @@ let finalDatesKeys = Object.keys(finalDates);
 let finalDatesDescriptions = {
   seven_release: "Релиз седьмого выпуска :)",
   vsos_rezi: "Награждение ВСОШ",
+  first_edu_day: "Первый учебный день в 4 четверти",
 };
 
 let currentKey = window.location.search.replace("?", "");
