@@ -37,6 +37,11 @@ if (prevKey !== undefined) {
   leftLink.classList.remove("hidden");
 }
 
+if (nextKey !== undefined) {
+  rightLink.href = "?" + nextKey;
+  rightLink.classList.remove("hidden");
+}
+
 function paintWithColor(frame, color) {
   document.getElementById(frame).classList.add(color);
   if (frame !== "seconds") {
