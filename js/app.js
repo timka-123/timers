@@ -1,6 +1,9 @@
 let finalDates = {
   vsos_rezi: new Date("March 28 2026 11:00:00 GMT+0300"),
   first_edu_day: new Date("April 3 2026 08:00:00 GMT+0300"),
+  rus_ege: new Date("June 4 2026 10:00:00 GMT+0300"),
+  math_ege: new Date("June 8 2026 10:00:00 GMT+0300"),
+  inf_ege: new Date("June 18 2026 10:00:00 GMT+0300"),
 };
 
 let finalDatesKeys = Object.keys(finalDates);
@@ -9,6 +12,9 @@ let finalDatesDescriptions = {
   seven_release: "Релиз седьмого выпуска :)",
   vsos_rezi: "Награждение ВСОШ",
   first_edu_day: "Первый учебный день в 4 четверти",
+  rus_ege: "ЕГЭ по русскому языку",
+  math_ege: "ЕГЭ по математике",
+  inf_ege: "ЕГЭ по информатике",
 };
 
 let currentKey = window.location.search.replace("?", "");
