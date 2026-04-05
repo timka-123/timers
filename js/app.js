@@ -3,8 +3,8 @@ let finalDates = {
   first_edu_day: new Date("April 3 2026 08:00:00 GMT+0300"),
   rus_ege: new Date("June 4 2026 10:00:00 GMT+0300"),
   math_ege: new Date("June 8 2026 10:00:00 GMT+0300"),
+  phys_ege: new Date("June 11 2026 10:00:00 GMT+0300"),
   inf_ege: new Date("June 18 2026 10:00:00 GMT+0300"),
-  phys_ege: new Date("June 11 2026 10:00:00 GMT+0300")
 };
 
 let finalDatesKeys = Object.keys(finalDates);
@@ -16,7 +16,7 @@ let finalDatesDescriptions = {
   rus_ege: "ЕГЭ по русскому языку",
   math_ege: "ЕГЭ по математике",
   inf_ege: "ЕГЭ по информатике",
-  phys_ege: "ЕГЭ по физике"
+  phys_ege: "ЕГЭ по физике",
 };
 
 let currentKey = window.location.search.replace("?", "");
