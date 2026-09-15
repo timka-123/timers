@@ -1,6 +1,5 @@
 let finalDates = {
-  end_bvi: new Date("July 25 2026 17:00:00 GMT+0300"),
-  release_konkurs: new Date("July 27 2026 10:00:00 GMT+0300")
+  predposvyat_hsse: new Date("September 20 2026 15:00:00 GMT+0300"),
 };
 
 let finalDatesKeys = Object.keys(finalDates);
@@ -14,7 +13,8 @@ let finalDatesDescriptions = {
   inf_ege: "ЕГЭ по информатике",
   phys_ege: "ЕГЭ по физике",
   end_bvi: "Окончание подачи документов для БВИ",
-  release_konkurs: "Выпуск конкурсных списков"
+  release_konkurs: "Выпуск конкурсных списков",
+  predposvyat_hsse: "Предпосвят ВШПИ"
 };
 
 let currentKey = window.location.search.replace("?", "");
