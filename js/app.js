@@ -1,5 +1,6 @@
 let finalDates = {
   predposvyat_hsse: new Date("September 20 2026 15:00:00 GMT+0300"),
+  newyear: new Date("January 1 2027 00:00:00 GMT+0300")
 };
 
 let finalDatesKeys = Object.keys(finalDates);
@@ -14,7 +15,8 @@ let finalDatesDescriptions = {
   phys_ege: "ЕГЭ по физике",
   end_bvi: "Окончание подачи документов для БВИ",
   release_konkurs: "Выпуск конкурсных списков",
-  predposvyat_hsse: "Предпосвят ВШПИ"
+  predposvyat_hsse: "Предпосвят ВШПИ",
+  newyear: "До нового года осталось..."
 };
 
 let currentKey = window.location.search.replace("?", "");
