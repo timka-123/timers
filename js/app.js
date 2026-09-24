@@ -1,5 +1,5 @@
 let finalDates = {
-  predposvyat_hsse: new Date("September 20 2026 15:00:00 GMT+0300"),
+  math_colloc: new Date("October 14 2026 12:10:00 GMT+0300"),
   newyear: new Date("January 1 2027 00:00:00 GMT+0300")
 };
 
@@ -16,7 +16,8 @@ let finalDatesDescriptions = {
   end_bvi: "Окончание подачи документов для БВИ",
   release_konkurs: "Выпуск конкурсных списков",
   predposvyat_hsse: "Предпосвят ВШПИ",
-  newyear: "До нового года осталось..."
+  newyear: "До нового года осталось...",
+  math_colloc: "До коллоквиума по матану осталось..."
 };
 
 let currentKey = window.location.search.replace("?", "");
